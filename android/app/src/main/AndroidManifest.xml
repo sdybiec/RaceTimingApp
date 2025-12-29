@@ -19,6 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".GridTimingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:label="Grid Timing" />
     </application>
 
 </manifest>

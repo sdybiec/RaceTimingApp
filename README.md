@@ -57,9 +57,9 @@ RaceTimingApp/
 
 ## Features
 
-### Race Finish Screen
+### Race Finish Screen (Keypad Timing View)
 
-The main timing interface includes:
+The keypad-based timing interface includes:
 
 1. **Title Bar**: Navigation to Home and Results screens
 2. **Timestamp Capture Button**: Large button displaying running clock for quick timestamp recording
@@ -67,6 +67,26 @@ The main timing interface includes:
 4. **Input Display**: Shows the bib number being entered
 5. **Numeric Keypad**: Telephone-style keypad (0-9, backspace, "No Bib", "Enter")
 6. **Bottom Toolbar**: Quick access to various timing functions
+
+**Workflow**: Timer taps the timestamp button, then enters the bib number using the keypad to associate the timestamp with a crew.
+
+### Grid Timing View
+
+An alternative timing interface optimized for fast one-tap timing:
+
+1. **Menu Bar**: Navigation to Home and Results screens
+2. **Title Panel**: Displays race name and running clock
+3. **Crew Button Grid**: Grid of buttons (8 columns), one button per crew
+4. **Status Display**: Shows finish count and status messages
+5. **Bottom Toolbar**: Quick access to various timing functions
+
+**Workflow**:
+- Each crew has a dedicated green button showing their bib number
+- **Tap once**: Captures timestamp and bib number, button turns yellow (draft state)
+- **Tap yellow button again**: Cancels the draft, button returns to green
+- **After 5 seconds**: Draft automatically finalizes, button disappears
+
+This view is ideal for races where crews finish in close succession, allowing one-tap timing without manual bib entry.
 
 ### Offline-First Architecture
 

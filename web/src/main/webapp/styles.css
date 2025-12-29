@@ -220,3 +220,118 @@ body {
     font-size: 20px;
     margin-bottom: 2px;
 }
+
+/* Grid Timing View Styles */
+.grid-timing-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.grid-title-panel {
+    background-color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 3px solid #ff6600;
+}
+
+.race-name-label {
+    font-size: 20px;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.race-clock-label {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+}
+
+.grid-scroll-panel {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #ffffff;
+}
+
+.crew-button-grid {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 5px;
+}
+
+@media (max-width: 768px) {
+    .crew-button-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.crew-button {
+    padding: 12px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #999;
+    transition: background-color 0.3s;
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.crew-button .bib-number {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    background: none;
+    padding: 0;
+    color: inherit;
+}
+
+.crew-button .button-text {
+    font-size: 10px;
+    color: inherit;
+}
+
+.crew-button-ready {
+    background: linear-gradient(to bottom, #B8E986 0%, #7ED321 100%);
+    color: #000;
+}
+
+.crew-button-ready:active {
+    background: linear-gradient(to bottom, #7ED321 0%, #6BC01E 100%);
+}
+
+.crew-button-draft {
+    background: linear-gradient(to bottom, #FFF176 0%, #F8E71C 100%);
+    color: #000;
+}
+
+.crew-button-draft:active {
+    background: linear-gradient(to bottom, #F8E71C 0%, #F4D03F 100%);
+}
+
+.crew-button-finalized {
+    display: none;
+}
+
+.status-label {
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ccc;
+    color: #666;
+}
+
+/* Special styling for "No Bib" button */
+.crew-button.no-bib {
+    background: linear-gradient(to bottom, #999 0%, #666 100%);
+    color: #fff;
+}
