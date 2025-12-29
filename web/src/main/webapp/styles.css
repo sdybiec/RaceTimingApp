@@ -335,3 +335,93 @@ body {
     background: linear-gradient(to bottom, #999 0%, #666 100%);
     color: #fff;
 }
+
+/* Fast Tap Timing View Styles */
+.fast-tap-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.timestamp-capture-fasttap {
+    margin: 10px 20px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #B8E986 0%, #7ED321 100%);
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.timestamp-capture-fasttap:active {
+    background: linear-gradient(to bottom, #7ED321 0%, #6BC01E 100%);
+}
+
+.bib-grid-scroll-panel {
+    max-height: 250px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-bottom: 3px solid #ff6600;
+    margin-bottom: 5px;
+}
+
+.bib-button-grid {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 5px;
+}
+
+@media (max-width: 768px) {
+    .bib-button-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.bib-button {
+    padding: 10px 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #999;
+    background: linear-gradient(to bottom, #B8E986 0%, #7ED321 100%);
+    color: #000;
+    min-height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bib-button:active {
+    background: linear-gradient(to bottom, #7ED321 0%, #6BC01E 100%);
+}
+
+.bib-button .bib-text {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.bib-button .button-subtext {
+    font-size: 9px;
+}
+
+.results-table-scroll {
+    flex: 1;
+    overflow-y: auto;
+    margin: 0 10px;
+}
+
+.unassigned-row {
+    background-color: #fff8dc !important;
+}
+
+.unassigned-row td {
+    font-style: italic;
+    color: #666;
+}

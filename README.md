@@ -88,6 +88,30 @@ An alternative timing interface optimized for fast one-tap timing:
 
 This view is ideal for races where crews finish in close succession, allowing one-tap timing without manual bib entry.
 
+### Fast Tap Timing View
+
+A hybrid interface that separates timestamp capture from bib assignment:
+
+1. **Title Bar**: Navigation to Home and Results screens
+2. **Timestamp Capture Button**: Large button with running clock for recording timestamps
+3. **Bib Button Grid**: Scrollable grid of buttons (8 columns) showing all crew bib numbers
+4. **Results Table**: Shows captured timing entries with sequence, bib, name, category, and race clock
+5. **Status Display**: Shows assignment status and finish count
+6. **Bottom Toolbar**: Quick access to various timing functions
+
+**Workflow**:
+- **Single finish**: Tap timestamp button → tap corresponding bib button (2 taps)
+- **Group finishes**: Tap timestamp button multiple times → tap bib buttons in finish order
+- Example: Three crews finish together → tap time, tap time, tap time → tap bib 201, tap bib 203, tap bib 204
+
+**Key Features**:
+- Unassigned timestamps shown in table with "Select a bib # above" placeholder
+- Bib buttons remain green and available for multiple uses
+- Status line shows last assigned crew with position and split time
+- Ideal for mass start races where crews finish in groups
+
+This view combines the speed of dedicated bib buttons with the flexibility to capture multiple timestamps before assignment.
+
 ### Offline-First Architecture
 
 Both applications work offline and sync when connectivity is available:

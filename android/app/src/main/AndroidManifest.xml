@@ -24,6 +24,11 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:label="Grid Timing" />
+        <activity
+            android:name=".FastTapActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:label="Fast Tap Timing" />
     </application>
 
 </manifest>
