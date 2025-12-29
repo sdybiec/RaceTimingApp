@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- Title Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home"
+            style="@style/TitleBarButton"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/status_indicator"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/race_finish"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnResults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/results"
+            style="@style/TitleBarButton"/>
+    </LinearLayout>
+
+    <!-- Timestamp Capture Button -->
+    <FrameLayout
+        android:id="@+id/timestampCaptureButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/timestamp_button_bg"
+        android:padding="30dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21:24.8"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tap_to_record"
+                android:textSize="18sp"
+                android:textColor="#333333"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Timing Table -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTimingTable"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
+    <!-- Input Display -->
+    <TextView
+        android:id="@+id/tvInputDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#f0f0f0"
+        android:text="@string/input_prompt"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+
+    <!-- Keypad -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:background="@color/backgroundGray"
+        android:padding="10dp">
+
+        <!-- Row 1 -->
+        <Button android:id="@+id/btn1" style="@style/KeypadButton"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1" android:text="1"/>
+        <Button android:id="@+id/btn2" style="@style/KeypadButton"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1" android:text="2"/>
+        <Button android:id="@+id/btn3" style="@style/KeypadButton"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1" android:text="3"/>
+
+        <!-- Row 2 -->
+        <Button android:id="@+id/btn4" style="@style/KeypadButton"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1" android:text="4"/>
+        <Button android:id="@+id/btn5" style="@style/KeypadButton"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1" android:text="5"/>
+        <Button android:id="@+id/btn6" style="@style/KeypadButton"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1" android:text="6"/>
+
+        <!-- Row 3 -->
+        <Button android:id="@+id/btn7" style="@style/KeypadButton"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1" android:text="7"/>
+        <Button android:id="@+id/btn8" style="@style/KeypadButton"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1" android:text="8"/>
+        <Button android:id="@+id/btn9" style="@style/KeypadButton"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1" android:text="9"/>
+
+        <!-- Row 4 -->
+        <Button android:id="@+id/btnBackspace" style="@style/KeypadButton"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1" android:text="@string/backspace"
+            android:textSize="18sp"/>
+        <Button android:id="@+id/btnNoBib" style="@style/KeypadButton"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1" android:text="@string/no_bib"
+            android:textSize="18sp"/>
+        <Button android:id="@+id/btn0" style="@style/KeypadButton"
+            android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_columnWeight="1" android:text="0"/>
+    </GridLayout>
+
+    <!-- Enter Button Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/backgroundGray"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp">
+
+        <Button
+            android:id="@+id/btnEnter"
+            style="@style/KeypadButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/enter"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <!-- Bottom Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#2a2a2a"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="❓\nHelp"
+            android:gravity="center"
+            android:textColor="#999999"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="⚠\nRace control"
+            android:gravity="center"
+            android:textColor="#999999"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="📋\nStart list"
+            android:gravity="center"
+            android:textColor="#999999"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="👤\nShow name"
+            android:gravity="center"
+            android:textColor="#999999"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="DNS/DNF/DSQ"
+            android:gravity="center"
+            android:textColor="#999999"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="👁\nNormal view"
+            android:gravity="center"
+            android:textColor="#999999"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="⬇\nHide keypad"
+            android:gravity="center"
+            android:textColor="#999999"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="+/−\nShow splits"
+            android:gravity="center"
+            android:textColor="#999999"
+            android:textSize="10sp"/>
+    </LinearLayout>
+
+</LinearLayout>

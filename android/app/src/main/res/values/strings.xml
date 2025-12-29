@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Race Timer</string>
+    <string name="race_finish">Race Finish</string>
+    <string name="home">Home</string>
+    <string name="results">Results</string>
+    <string name="tap_to_record">Tap to record a time</string>
+    <string name="seq_number">Seq #</string>
+    <string name="bib">Bib</string>
+    <string name="name">Name</string>
+    <string name="category">Category</string>
+    <string name="race_clock">Race clock</string>
+    <string name="enter_bib">Enter a bib number</string>
+    <string name="no_bib">No Bib</string>
+    <string name="enter">Enter</string>
+    <string name="backspace">⌫</string>
+    <string name="help">Help</string>
+    <string name="input_prompt">Tap timer button or pre-enter bib #</string>
+</resources>
