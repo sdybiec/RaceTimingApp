@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e8e8e8">
+
+    <!-- Title Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            style="@style/TitleBarButton"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/status_indicator"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Racer Info"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            style="@style/TitleBarButton"/>
+    </LinearLayout>
+
+    <!-- Racer Number -->
+    <TextView
+        android:id="@+id/tvRacerNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Racer 1 of 161"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="15dp"/>
+
+    <!-- Orange Separator -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#ff6600"/>
+
+    <!-- Form ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Name Field -->
+            <include layout="@layout/form_field_text"
+                android:id="@+id/fieldName"/>
+
+            <!-- Category Field -->
+            <include layout="@layout/form_field_spinner"
+                android:id="@+id/fieldCategory"/>
+
+            <!-- Bib Number Field -->
+            <include layout="@layout/form_field_spinner"
+                android:id="@+id/fieldBibNumber"/>
+
+            <!-- Team Name Field (optional) -->
+            <include layout="@layout/form_field_text_optional"
+                android:id="@+id/fieldTeamName"/>
+
+            <!-- Team Name 2 Field (optional) -->
+            <include layout="@layout/form_field_text_optional"
+                android:id="@+id/fieldTeamName2"/>
+
+            <!-- Age Field (optional) -->
+            <include layout="@layout/form_field_spinner_optional"
+                android:id="@+id/fieldAge"/>
+
+            <!-- Gender Field (optional) -->
+            <include layout="@layout/form_field_spinner_optional"
+                android:id="@+id/fieldGender"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
